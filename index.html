@@ -11,19 +11,112 @@
     <meta name="description" content="Saleh Ahmed Samee is a Bangladeshi guitarist, multi-instrumentalist, composer and music producer — official EPK with bio, timeline, live performances, collaborations, instruments and booking links." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://salehsamee.github.io/" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="icon" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="preload" href="samee pictures/Sydney hi res.jpg" as="image">
+    <link rel="dns-prefetch" href="//img.youtube.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta property="og:site_name" content="Saleh Ahmed Samee | Official Artist Profile" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Saleh Ahmed Samee | Official Artist Profile" />
     <meta property="og:description" content="Official artist profile of Saleh Ahmed Samee—national and international performances, awards, and music collaborations." />
     <meta property="og:url" content="https://salehsamee.github.io/" />
-    <meta property="og:image" content="https://salehsamee.github.io/images/saleh-samee-portrait.jpg" />
+    <meta property="og:image" content="https://salehsamee.github.io/samee%20pictures/Sydney%20hi%20res.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Saleh Ahmed Samee | Official Artist Profile" />
     <meta name="twitter:description" content="Official artist profile of Saleh Ahmed Samee—national and international performances, awards, and music collaborations." />
-    <meta name="twitter:image" content="https://salehsamee.github.io/images/saleh-samee-portrait.jpg" />
+    <meta name="twitter:image" content="https://salehsamee.github.io/samee%20pictures/Sydney%20hi%20res.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            position: relative;
+            background-image: linear-gradient(180deg, rgba(5,10,27,0.90), rgba(12,18,43,0.85)), url("samee pictures/saleh-samee-stage-with-pink-panther.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 760px;
+            display: flex;
+            align-items: center;
+        }
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+            pointer-events: none;
+        }
+        .hero-bg .container {
+            position: relative;
+            z-index: 1;
+        }
+        .card-hover:hover, .instrument-card:hover, .video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+        .instrument-card, .video-card { transition: all 0.3s ease; }
+        .btn-primary { background: linear-gradient(45deg, #667eea, #764ba2); box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+        .btn-primary:hover { background: linear-gradient(45deg, #764ba2, #667eea); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .gallery img { height: 220px !important; object-fit: cover; border-radius: 12px; transition: transform 0.3s ease; }
+        .gallery img:hover { transform: scale(1.05); }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        .animate-fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        section { animation: fadeIn 0.6s ease-out; }
+        .dark { background-color: #1a202c; color: #e2e8f0; }
+        .dark .bg-gray-50 { background-color: #2d3748; }
+        .dark .bg-white { background-color: #4a5568; color: #e2e8f0; }
+        .dark .text-gray-600 { color: #a0aec0; }
+        .dark .text-gray-700 { color: #cbd5e0; }
+        .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        button:focus, a:focus, input:focus, textarea:focus { outline: 2px solid #667eea; outline-offset: 2px; }
+        /* Timeline styles */
+        .timeline-item { margin-bottom: 2rem; }
+        .timeline-date { font-weight: bold; color: #4a5568; }
+        .timeline-content { margin-top: 0.5rem; }
+        .timeline-content h3 { margin-bottom: 0.5rem; color: #2d3748; }
+        .timeline-content p { color: #718096; }
+        details.timeline-card summary { list-style: none; cursor: pointer; }
+        details.timeline-card summary::-webkit-details-marker { display: none; }
+        details.timeline-card summary { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; }
+        details.timeline-card summary .timeline-summary-title { font-size: 1.05rem; font-weight: 700; }
+        details.timeline-card summary .timeline-summary-copy { color: #718096; font-size: 0.95rem; margin-top: 0.35rem; }
+        details.timeline-card summary .timeline-toggle { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.4rem; border-radius: 9999px; background: rgba(102, 126, 234, 0.12); color: #4f46e5; font-weight: 700; transition: transform 0.25s ease; }
+        details.timeline-card[open] summary .timeline-toggle { transform: rotate(180deg); }
+        details.timeline-card .timeline-body { border-top: 1px solid rgba(226, 232, 240, 0.95); padding: 1.5rem; background: #ffffff; }
+        .timeline-grid { display: grid; gap: 1rem; }
+        @media (min-width: 768px) { .timeline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script src="https://unpkg.com/web-vitals@3.1.1/dist/web-vitals.umd.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Core Web Vitals tracking
+        function sendToGoogleAnalytics({ name, delta, value, id }) {
+            gtag('event', name, {
+                event_category: 'Web Vitals',
+                event_label: id,
+                value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+                custom_map: { metric_value: value }
+            });
+        }
+        
+        if ('web-vitals' in window) {
+            webVitals.getCLS(sendToGoogleAnalytics);
+            webVitals.getFID(sendToGoogleAnalytics);
+            webVitals.getFCP(sendToGoogleAnalytics);
+            webVitals.getLCP(sendToGoogleAnalytics);
+            webVitals.getTTFB(sendToGoogleAnalytics);
+        }
+    </script>
 
     <script type="application/ld+json">
     {
@@ -36,7 +129,7 @@
           "alternateName": "Saleh Samee",
           "description": "Saleh Ahmed Samee is a Bangladeshi guitarist, multi-instrumentalist, composer, and music producer known for ethnic fusion with rubab, mandolin, dotara, oud, and custom Pink Panther Stratocaster.",
           "url": "https://salehsamee.github.io/",
-          "image": "https://salehsamee.github.io/images/saleh-samee-portrait.jpg",
+          "image": "https://salehsamee.github.io/samee%20pictures/Sydney%20hi%20res.jpg",
           "email": "mailto:samee2040@gmail.com",
           "sameAs": [
             "https://www.google.com/search?kgmid=/g/11z210l5y2",
@@ -158,9 +251,202 @@
         {
           "@type": "ImageObject",
           "@id": "https://salehsamee.github.io/#primaryimage",
-          "url": "https://salehsamee.github.io/images/saleh-samee-portrait.jpg",
+          "url": "https://salehsamee.github.io/samee%20pictures/Sydney%20hi%20res.jpg",
+          "caption": "Live performance by Saleh Samee in Sydney",
           "width": 1200,
-          "height": 1200
+          "height": 800
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#studioimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/inside%20studio%20with%20pink%20panther.jpg",
+          "caption": "Samee in studio with Pink Panther Stratocaster",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#cokestudioimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/coke-studio-official-photo.jpg",
+          "caption": "Samee performing on the Coke Studio Bangla set",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#portraitimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/F0A47AB2-092F-46A5-8B2F-E182364033E2_1_201_a2.jpg",
+          "caption": "Saleh Samee portrait with guitar",
+          "width": 3584,
+          "height": 5375
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#acousticguitarimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/acoustic%20guitar.JPG",
+          "caption": "Saleh Samee with acoustic guitar",
+          "width": 2000,
+          "height": 3272
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#bandchatokimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/band-chatok.jpg",
+          "caption": "Samee performing with band at Chatok",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#jolergaanimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/band-joler-gaan-from-the-set-of-ipdc-amader-gan.JPG",
+          "caption": "Samee with Joler Gaan on the IPDC Amader Gaan set",
+          "width": 1440,
+          "height": 1080
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#abbasimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/doorgo,%20saleh%20samee%20and%20vocal%20abdullah%20al%20farabi.JPG",
+          "caption": "Saleh Samee with vocalist Abdullah Al Farabi",
+          "width": 2560,
+          "height": 1707
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#ipdcsetimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/from%20the%20set%20of%20ipdc%20amader%20gan.JPG",
+          "caption": "Samee on the set of IPDC Amader Gaan",
+          "width": 3000,
+          "height": 2250
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#studioMandolinImage",
+          "url": "https://salehsamee.github.io/samee%20pictures/insdie%20studio-with-mandolin.jpg",
+          "caption": "Samee in studio with mandolin",
+          "width": 5116,
+          "height": 3795
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#newyorkliveimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/new%20york%20live.jpeg",
+          "caption": "Saleh Samee live in New York",
+          "width": 2000,
+          "height": 3000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#acousticstageimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/saleh-samee-stage-acoustic-guitar.JPG",
+          "caption": "Saleh Samee stage acoustic guitar performance",
+          "width": 3648,
+          "height": 5472
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#pinkpantherstageimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/saleh-samee-stage-with-pink-panther.jpg",
+          "caption": "Samee performing with his Pink Panther Stratocaster",
+          "width": 5413,
+          "height": 3608
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#jolergaanbandimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/saleh-samee-with-band-joler-gaan.JPG",
+          "caption": "Samee with band Joler Gaan",
+          "width": 3088,
+          "height": 2320
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#habibnyimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/saleh-samee-with-habib-wahid-new-york-performance.jpeg",
+          "caption": "Samee performing with Habib Wahid in New York",
+          "width": 3000,
+          "height": 2000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#acousticstage2image",
+          "url": "https://salehsamee.github.io/samee%20pictures/samee%20acoustic%20guitar%20stage.JPG",
+          "caption": "Saleh Samee performing acoustic guitar on stage",
+          "width": 3648,
+          "height": 5472
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#sameewithhabibimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/samee%20and%20habib%20wahid.jpg",
+          "caption": "Samee with Habib Wahid",
+          "width": 5408,
+          "height": 3605
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#samestaageimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/samee%20stage.jpg",
+          "caption": "Samee performing on stage",
+          "width": 3073,
+          "height": 4590
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#digitalbangladeshimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage-digital-bangladesh-concert.JPG",
+          "caption": "Samee on stage at Digital Bangladesh concert",
+          "width": 3648,
+          "height": 5472
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#newyorkstageimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage-from-new-york.jpeg",
+          "caption": "Samee performing on stage in New York",
+          "width": 1000,
+          "height": 1500
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#acousticliveimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage-performance-acoustic.JPG",
+          "caption": "Samee acoustic live performance",
+          "width": 4000,
+          "height": 6000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#emonchowdhuryimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage-perfromance-with-emon-chowdhury.JPG",
+          "caption": "Samee performing with Emon Chowdhury",
+          "width": 3000,
+          "height": 2000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#festivalstageimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage1.JPG",
+          "caption": "Samee on festival stage",
+          "width": 2000,
+          "height": 3000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#stagecrowdimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/stage3.JPG",
+          "caption": "Samee on stage with crowd",
+          "width": 2000,
+          "height": 3000
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://salehsamee.github.io/#withpinkpantherimage",
+          "url": "https://salehsamee.github.io/samee%20pictures/with%20pink%20panther.jpg",
+          "caption": "Samee with his Pink Panther guitar",
+          "width": 2676,
+          "height": 3345
         },
         {
           "@type": "WebSite",
@@ -962,19 +1248,25 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='static';this.style.left='0';this.style.width='auto';this.style.height='auto';">Skip to content</a>
-    <header>
+    <header class="fixed top-0 w-full bg-black bg-opacity-90 text-white py-4 z-50">
         <div class="nav-inner container">
-            <div class="brand">Saleh Ahmed Samee</div>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+            <div class="brand">🎸 Saleh Ahmed Samee</div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="text-white hover:text-gray-300" aria-label="Toggle theme">🌙</button>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+            </div>
             <div class="nav-menu" id="main-nav" aria-expanded="false">
                 <nav aria-label="Main navigation" aria-expanded="false" role="navigation">
                     <ul>
                         <li><a href="#bio">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#featured-work">Featured Work</a></li>
                         <li><a href="#career-timeline">Career &amp; Timeline</a></li>
                         <li><a href="#collaborations">Collaborations</a></li>
                         <li><a href="#videos">Videos</a></li>
                         <li><a href="#instruments-gear">Instruments & Gear</a></li>
                         <li><a href="#awards">Awards</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -982,97 +1274,451 @@
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <section class="hero" id="bio">
-            <h1>Saleh Ahmed Samee</h1>
-            <p class="intro"><strong>Saleh Ahmed Samee</strong>, professionally known as <strong>Saleh Samee</strong>, is a Bangladeshi guitarist, multi-instrumentalist, composer, and music producer based in Dhaka, Bangladesh. He is known for his work in ethnic fusion music, integrating traditional string instruments such as mandolin, dotara, and Afghan rubab into contemporary pop, rock, and electronic music. He has collaborated with leading Bangladeshi artists and has performed in international tours, national broadcasts, and major music productions.</p>
-        
-        <p>Widely recognized for his iconic <strong>Pink Panther Custom Stratocaster</strong>, Samee is a master of the <strong>Afghan Rabab, Mandolin, Dotara, Saz, and Oud</strong>. His extensive work as a session player and producer has made him a pivotal collaborator for Bangladesh's mainstream icons and international music circuits.</p>
+    <section class="hero-bg text-white py-20 pt-24">
+        <div class="container mx-auto text-center px-4">
+            <img src="samee pictures/Sydney hi res.jpg" alt="Saleh Samee" class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-white shadow-lg">
+            <h1 class="text-5xl font-bold mb-4">Saleh Ahmed Samee</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Guitarist • Multi-Instrumentalist • Composer • Music Producer</p>
+            <div class="space-x-4">
+                <a href="#bio" class="btn-primary text-white px-8 py-3 rounded-full font-semibold inline-block">Discover My Story</a>
+                <a href="#videos" class="bg-white text-purple-900 px-8 py-3 rounded-full font-semibold inline-block hover:bg-gray-100">Watch Performances</a>
+            </div>
+        </div>
     </section>
 
+    <main id="main-content" class="container">
+        <section id="bio" class="py-16 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">About Saleh Ahmed Samee</h1>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Bridging traditional Bangladeshi music with contemporary sounds</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-4">The Artist</h2>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            <strong>Saleh Ahmed Samee</strong>, professionally known as <strong>Saleh Samee</strong>, is a visionary Bangladeshi guitarist, multi-instrumentalist, composer, and music producer based in Dhaka, Bangladesh. He is renowned for his innovative work in ethnic fusion music, seamlessly integrating traditional string instruments such as mandolin, dotara, and Afghan rubab into contemporary pop, rock, and electronic music.
+                        </p>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            His unique approach has earned him collaborations with leading Bangladeshi artists and performances in international tours, national broadcasts, and major music productions across the globe.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border-l-4 border-purple-500">
+                            <blockquote class="text-gray-800 italic">
+                                "Music is the universal language that connects cultures and generations. My mission is to preserve Bangladesh's rich musical heritage while pushing the boundaries of modern soundscapes."
+                            </blockquote>
+                            <cite class="text-purple-600 font-semibold mt-2 block">— Saleh Ahmed Samee</cite>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Signature Expertise</h2>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Widely recognized for his iconic <strong>Pink Panther Custom Stratocaster</strong>, Samee is a master of traditional and modern instruments including the <strong>Afghan Rabab, Mandolin, Dotara, Saz, and Oud</strong>.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                                <span class="text-gray-700">Session guitarist for Bangladesh's mainstream icons</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                <span class="text-gray-700">International music producer and composer</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="text-gray-700">Cultural ambassador bridging East and West</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+                                <span class="text-gray-700">Award-winning instrumentalist and performer</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-gray-900 mb-2">Quick Facts</h3>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-gray-600">Based in:</span>
+                                    <span class="font-medium text-gray-900">Dhaka, Bangladesh</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Specializes in:</span>
+                                    <span class="font-medium text-gray-900">Ethnic Fusion</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Experience:</span>
+                                    <span class="font-medium text-gray-900">10+ Years</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Languages:</span>
+                                    <span class="font-medium text-gray-900">English, Bengali</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="inline-flex items-center space-x-6 text-sm text-gray-600">
+                        <span>🎵 Music Producer</span>
+                        <span>•</span>
+                        <span>🎸 Session Guitarist</span>
+                        <span>•</span>
+                        <span>🌍 International Performer</span>
+                        <span>•</span>
+                        <span>🎨 Cultural Innovator</span>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold mb-2">Career Highlights</h2>
+                        <p class="text-purple-100">Numbers that tell the story of a musical journey</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">10+</div>
+                            <div class="text-purple-100 text-sm">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">50M+</div>
+                            <div class="text-purple-100 text-sm">Streams Reached</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">15+</div>
+                            <div class="text-purple-100 text-sm">Countries Performed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">25+</div>
+                            <div class="text-purple-100 text-sm">Major Collaborations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16" style="background-image: linear-gradient(135deg, rgba(15,20,40,0.95), rgba(25,30,60,0.90)), url('samee pictures/inside studio with pink panther.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3);"></div>
+            <div class="max-w-6xl mx-auto px-4" style="position: relative; z-index: 1;">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Services & Expertise</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto mb-6"></div>
+                    <p class="text-white max-w-2xl mx-auto">Professional music services combining traditional craftsmanship with modern production techniques</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white bg-opacity-95 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:shadow-xl transition-all duration-300">
+                        <div class="text-4xl mb-4">🎸</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Live Performance</h3>
+                        <p class="text-gray-700 mb-4">Concert performances, tours, and live events with full band or solo acoustic sets featuring ethnic fusion arrangements.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• International tours</li>
+                            <li>• Festival appearances</li>
+                            <li>• Corporate events</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white bg-opacity-95 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:shadow-xl transition-all duration-300">
+                        <div class="text-4xl mb-4">🎵</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Music Production</h3>
+                        <p class="text-gray-700 mb-4">Studio recording, mixing, and production services for artists, films, and commercial projects.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Session guitar work</li>
+                            <li>• Traditional instrument recording</li>
+                            <li>• Sound design</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white bg-opacity-95 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:shadow-xl transition-all duration-300">
+                        <div class="text-4xl mb-4">🎨</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Composition & Arrangement</h3>
+                        <p class="text-gray-700 mb-4">Original compositions and arrangements blending traditional Bangladeshi music with contemporary styles.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Film scores</li>
+                            <li>• Advertising music</li>
+                            <li>• Cultural projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white bg-opacity-95 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:shadow-xl transition-all duration-300">
+                        <div class="text-4xl mb-4">🎪</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Workshops & Education</h3>
+                        <p class="text-gray-700 mb-4">Music education and cultural workshops sharing traditional instrument techniques and fusion methodologies.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Instrument masterclasses</li>
+                            <li>• Cultural exchange programs</li>
+                            <li>• Music therapy sessions</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white bg-opacity-95 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:shadow-xl transition-all duration-300">
+                        <div class="text-4xl mb-4">🎬</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Media & Broadcasting</h3>
+                        <p class="text-gray-700 mb-4">Television appearances, radio features, and media productions showcasing musical talent and cultural heritage.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• TV performances</li>
+                            <li>• Radio interviews</li>
+                            <li>• Documentary features</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl border border-indigo-200 hover:shadow-lg transition-shadow">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Collaborations</h3>
+                        <p class="text-gray-600 mb-4">Creative partnerships with artists, producers, and cultural institutions for innovative music projects.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Artist collaborations</li>
+                            <li>• Cross-cultural projects</li>
+                            <li>• Music festivals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-work" class="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Featured Work</h2>
+                    <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                    <p class="text-purple-100 max-w-2xl mx-auto">Showcasing recent highlights and ongoing projects that define my musical journey</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🎵</div>
+                        <h3 class="text-xl font-semibold mb-3">Coke Studio Bangla Season 3</h3>
+                        <p class="text-purple-100 mb-4">Featured Rubab instrumentalist on "Moha Jadu" with Habib Wahid - currently streaming on major platforms.</p>
+                        <a href="https://youtu.be/UghMf59vDJM" target="_blank" class="text-white hover:text-purple-200 font-medium">Watch Performance →</a>
+                    </div>
+
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🌍</div>
+                        <h3 class="text-xl font-semibold mb-3">International Tours 2024</h3>
+                        <p class="text-purple-100 mb-4">USA and Australia tours with Habib Wahid, performing for diverse audiences across four countries.</p>
+                        <a href="#videos" class="text-white hover:text-purple-200 font-medium">View Tour Highlights →</a>
+                    </div>
+
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🎸</div>
+                        <h3 class="text-xl font-semibold mb-3">Pink Panther Sessions</h3>
+                        <p class="text-purple-100 mb-4">Signature guitar work and production featuring the iconic custom Stratocaster in studio and live settings.</p>
+                        <a href="#instruments-gear" class="text-white hover:text-purple-200 font-medium">Explore Gear →</a>
+                    </div>
+
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🎬</div>
+                        <h3 class="text-xl font-semibold mb-3">IPDC Amader Gaan</h3>
+                        <p class="text-purple-100 mb-4">Cultural preservation project featuring traditional instruments in modern arrangements.</p>
+                        <a href="https://youtu.be/0DD2IvksQJk" target="_blank" class="text-white hover:text-purple-200 font-medium">Watch Episode →</a>
+                    </div>
+
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🎪</div>
+                        <h3 class="text-xl font-semibold mb-3">Educational Initiatives</h3>
+                        <p class="text-purple-100 mb-4">Workshops and masterclasses sharing traditional instrument techniques with new generations.</p>
+                        <a href="#contact" class="text-white hover:text-purple-200 font-medium">Book Workshop →</a>
+                    </div>
+
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold mb-3">Ongoing Collaborations</h3>
+                        <p class="text-purple-100 mb-4">Active partnerships with artists, producers, and cultural institutions for innovative projects.</p>
+                        <a href="#collaborations" class="text-white hover:text-purple-200 font-medium">View Collaborators →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <section id="instruments-gear">
-        <h2>🎸 Instruments & Gear Gallery</h2>
-        <p style="color: #b3c4dc;">A showcase of signature instruments and studio gear used in performances and productions.</p>
+        <h2>🎸 The Sonic Architecture of Saleh Samee</h2>
+        <p style="color: #b3c4dc;">A refined showcase of signature instruments that define the visual identity and tonal character of my work.</p>
         <div class="gallery">
-            <article class="instrument-card">
+            <article class="instrument-card" data-instrument-name="Pink Panther Custom Stratocaster" data-instrument-tagline="The Visual Manifesto" data-instrument-summary="A living extension of my artistic identity, this iconic pink guitar defines my tone and stage persona." data-instrument-usage="Stage work, studio sessions, and high-profile international performances">
+                <img src="instruments/1.pink-panther-stratocaster.jpg" alt="Pink Panther Custom Stratocaster" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
                 <h4>Pink Panther Custom Stratocaster</h4>
-                <p>Stage main guitar, custom pickup setup for cutting modern pop-rock lead tone.</p>
+                <p>The visual manifesto of my sound, recognized before a single note is played.</p>
             </article>
-            <article class="instrument-card">
+            <article class="instrument-card" data-instrument-name="Signature Custom Mandolin" data-instrument-tagline="The Foundation of a Legacy" data-instrument-summary="This hand-carved mandolin has been a constant companion through my musical evolution and anchors countless recordings." data-instrument-usage="Theme tracks, collaborations, and studio sessions for modern Bengali pop and folk fusion">
+                <img src="instruments/3. Custom-mandolin.jpg" alt="Signature Custom Mandolin" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
+                <h4>Signature Custom Mandolin</h4>
+                <p>Bright percussive soul, woven into landmark recordings and collaborations.</p>
+            </article>
+            <article class="instrument-card" data-instrument-name="Afghan Rabab" data-instrument-tagline="The Echo of the Silk Road" data-instrument-summary="A deep resonant instrument that bridges centuries of heritage and modern fusion in tracks like Coke Studio Bangla's 'Moha Jadu'." data-instrument-usage="World fusion performances, soundtrack work, and cultural collaborations">
+                <img src="instruments/2. afghan-rabab.jpg" alt="Afghan Rabab" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
                 <h4>Afghan Rabab</h4>
-                <p>Ethnic acoustic centerpiece for world fusion performances and soundtrack sessions.</p>
+                <p>The Silk Road texture of my ensemble, grounded in tradition and reaching for the stars.</p>
             </article>
-            <article class="instrument-card">
-                <h4>Mandolin</h4>
-                <p>Used in studio and live folk arrangements with precise tremolo and harmonic textures.</p>
+            <article class="instrument-card" data-instrument-name="Arabic Oud" data-instrument-tagline="The Explorer of Microtonal Worlds" data-instrument-summary="This oud brings microtonal depth and Middle Eastern philosophy into my fusion compositions." data-instrument-usage="Ambient arrangements, modern fusion compositions, and expressive solo passages">
+                <img src="instruments/4.arabic-oud.jpg" alt="Arabic Oud" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
+                <h4>Arabic Oud</h4>
+                <p>Exploring notes between notes, this oud expands my sound into new tonal landscapes.</p>
             </article>
-            <article class="instrument-card">
-                <h4>Dotara</h4>
-                <p>Traditional Bengali string voice for authentic film scoring and classical pop melodies.</p>
+            <article class="instrument-card" data-instrument-name="Custom Storyteller Acoustic" data-instrument-tagline="Carved with the Same Soul" data-instrument-summary="A personal composition canvas crafted with the same visual language as my mandolin, built for storytelling and intimate performances." data-instrument-usage="Unplugged sessions, narrative compositions, and acoustic storytelling performances">
+                <img src="instruments/5. Acoustic Guitar.jpg" alt="Custom Storyteller Acoustic" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
+                <h4>Custom Storyteller Acoustic</h4>
+                <p>Carved with the same soul, this guitar is the canvas for my most personal compositions.</p>
             </article>
-            <article class="instrument-card">
-                <h4>Oud</h4>
-                <p>Required for Middle Eastern and fusion setlists, used for ambient composition and solos.</p>
-            </article>
-            <article class="instrument-card">
-                <h4>Apogee Duet</h4>
-                <p>Professional audio interface for high-fidelity recording and monitoring in studio sessions.</p>
-            </article>
-            <article class="instrument-card">
-                <h4>Adam Audio T5V</h4>
-                <p>Studio monitoring speakers for accurate sound reproduction and mixing.</p>
-            </article>
-            <article class="instrument-card">
-                <h4>Logic Pro &amp; Ableton Live</h4>
-                <p>DAW software for professional music production, arrangement, and live performance setups.</p>
+            <article class="instrument-card" data-instrument-name="Tara's Ensemble" data-instrument-tagline="The Collective Voice" data-instrument-summary="This ensemble is the sonic DNA of my career, presenting the full spectrum of traditional and electric string instruments in one identity." data-instrument-usage="Ensemble performances, cultural productions, and signature visual presentations">
+                <img src="instruments/6. Taras ensemble.jpg" alt="Tara's Ensemble" style="width:100%; height:160px; border-radius:10px; object-fit:cover; margin-bottom:8px;">
+                <h4>Tara's Ensemble</h4>
+                <p>The full collective voice of my sonic identity, blending ancient heritage with modern production.</p>
             </article>
         </div>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Product",
+              "name": "Pink Panther Custom Stratocaster",
+              "description": "A living extension of Saleh Samee's artistic identity, this iconic guitar defines his signature stage sound and visual presence.",
+              "image": "https://salehsamee.github.io/instruments/1.pink-panther-stratocaster.jpg"
+            },
+            {
+              "@type": "Product",
+              "name": "Signature Custom Mandolin",
+              "description": "A hand-carved mandolin that anchors many landmark recordings and collaboration tracks in Bangladeshi music.",
+              "image": "https://salehsamee.github.io/instruments/3. Custom-mandolin.jpg"
+            },
+            {
+              "@type": "Product",
+              "name": "Afghan Rabab",
+              "description": "A resonant instrument that brings Silk Road textures to modern fusion productions and live performances.",
+              "image": "https://salehsamee.github.io/instruments/2. afghan-rabab.jpg"
+            },
+            {
+              "@type": "Product",
+              "name": "Arabic Oud",
+              "description": "An instrument for microtonal exploration that extends South Asian fusion into Middle Eastern tonal territory.",
+              "image": "https://salehsamee.github.io/instruments/4.arabic-oud.jpg"
+            },
+            {
+              "@type": "Product",
+              "name": "Custom Storyteller Acoustic",
+              "description": "A storytelling acoustic guitar shaped with the same visual identity as Saleh Samee's signature instruments.",
+              "image": "https://salehsamee.github.io/instruments/5. Acoustic Guitar.jpg"
+            },
+            {
+              "@type": "Product",
+              "name": "Tara's Ensemble",
+              "description": "The collective instrument identity representing the full sonic DNA of Saleh Samee's career.",
+              "image": "https://salehsamee.github.io/instruments/6. Taras ensemble.jpg"
+            }
+          ]
+        }
+        </script>
     </section>
 
     <section id="photo-gallery">
         <h2>📸 Photo Gallery</h2>
-        <p style="color:#b3c4dc;">Live shots and studio moments featuring Saleh Ahmed Samee.</p>
+        <p style="color:#b3c4dc;">A professionally curated gallery of Samee’s stage, studio, collaboration, and signature guitar moments.</p>
 
         <div class="gallery-controls" role="tablist" aria-label="Photo categories">
             <button class="active" data-filter="all" type="button">All</button>
             <button data-filter="live" type="button">Live</button>
             <button data-filter="studio" type="button">Studio</button>
             <button data-filter="collaboration" type="button">Collaboration</button>
+            <button data-filter="signature" type="button">Signature</button>
         </div>
 
         <div class="gallery" id="photoGallery">
-            <article class="instrument-card gallery-item" data-category="live" data-caption="Live performance">
-                <img src="samee pictures/2024_02_02_18_22_IMG_6391.jpg" alt="Samee performance 2024-02-02" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>Live performance</p>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Live performance in Sydney">
+                <img src="samee pictures/Sydney hi res.jpg" alt="Saleh Samee performing live in Sydney" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Live in Sydney</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="live" data-caption="Samee in Sydney stage moment">
-                <img src="samee pictures/Sydney hi res.jpg" alt="Samee in Sydney" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>Sydney stage</p>
+            <article class="instrument-card gallery-item" data-category="signature" data-caption="Live guitar portrait">
+                <img src="samee pictures/F0A47AB2-092F-46A5-8B2F-E182364033E2_1_201_a2.jpg" alt="Saleh Samee portrait with guitar" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Signature portrait</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="studio" data-caption="Inside studio work">
-                <img src="samee pictures/insdie studio.jpg" alt="Inside studio" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>Inside studio</p>
+            <article class="instrument-card gallery-item" data-category="studio" data-caption="Acoustic guitar studio session">
+                <img src="samee pictures/acoustic guitar.JPG" alt="Saleh Samee with acoustic guitar" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Acoustic guitar session</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="studio" data-caption="Pink Panther session in studio">
-                <img src="samee pictures/inside studio with pink panther.jpg" alt="Inside studio with Pink Panther" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Band performance at Chatok">
+                <img src="samee pictures/band-chatok.jpg" alt="Samee performing with band at Chatok" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Band performance</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Joler Gaan at IPDC Amader Gaan">
+                <img src="samee pictures/band-joler-gaan-from-the-set-of-ipdc-amader-gan.JPG" alt="Samee with Joler Gaan on IPDC Amader Gaan set" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Joler Gaan at IPDC</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Coke Studio Bangla session">
+                <img src="samee pictures/coke-studio-official-photo.jpg" alt="Samee performing on Coke Studio Bangla" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Coke Studio Bangla</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Live with vocal Abdullah Al Farabi">
+                <img src="samee pictures/doorgo, saleh samee and vocal abdullah al farabi.JPG" alt="Samee with vocal Abdullah Al Farabi" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Collaboration performance</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="On-set performance at IPDC Amader Gaan">
+                <img src="samee pictures/from the set of ipdc amader gan.JPG" alt="Samee on set of IPDC Amader Gaan" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>IPDC Amader Gaan</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="studio" data-caption="Pink Panther Stratocaster studio session">
+                <img src="samee pictures/inside studio with pink panther.jpg" alt="Samee recording in the studio with Pink Panther Stratocaster" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
                 <p>Pink Panther studio</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Samee and Habib Wahid">
-                <img src="samee pictures/samee and habib wahid.jpg" alt="Samee and Habib Wahid" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>With Habib Wahid</p>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="New York live showroom">
+                <img src="samee pictures/new york live.jpeg" alt="Saleh Samee live in New York" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>New York live</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="live" data-caption="Stage moment performance">
-                <img src="samee pictures/samee stage.jpg" alt="Samee on stage" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>Stage moment</p>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Acoustic stage performance">
+                <img src="samee pictures/saleh-samee-stage-acoustic-guitar.JPG" alt="Saleh Samee stage acoustic guitar performance" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Acoustic stage</p>
             </article>
-            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Samee with Pink Panther">
-                <img src="samee pictures/with pink panther.jpg" alt="With Pink Panther" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
-                <p>Pink Panther guitar</p>
+            <article class="instrument-card gallery-item" data-category="signature" data-caption="Pink Panther Stratocaster signature set">
+                <img src="samee pictures/saleh-samee-stage-with-pink-panther.jpg" alt="Samee performing with his Pink Panther Stratocaster" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Signature guitar set</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="With Joler Gaan bandmates">
+                <img src="samee pictures/saleh-samee-with-band-joler-gaan.JPG" alt="Saleh Samee with band Joler Gaan" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>With Joler Gaan</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Habib Wahid performance in New York">
+                <img src="samee pictures/saleh-samee-with-habib-wahid-new-york-performance.jpeg" alt="Samee performing with Habib Wahid in New York" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>New York performance</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="signature" data-caption="Stage acoustic guitar moment">
+                <img src="samee pictures/samee acoustic guitar stage.JPG" alt="Samee performing with acoustic guitar on stage" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Acoustic stage moment</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Digital Bangladesh concert stage">
+                <img src="samee pictures/stage-digital-bangladesh-concert.JPG" alt="Samee on stage at Digital Bangladesh concert" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Digital Bangladesh concert</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="New York stage performance">
+                <img src="samee pictures/stage-from-new-york.jpeg" alt="Samee performing on stage in New York" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>New York stage</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Acoustic live performance">
+                <img src="samee pictures/stage-performance-acoustic.JPG" alt="Samee acoustic live performance" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Acoustic live</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="collaboration" data-caption="Live performance with Emon Chowdhury">
+                <img src="samee pictures/stage-perfromance-with-emon-chowdhury.JPG" alt="Samee live with Emon Chowdhury" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>With Emon Chowdhury</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Festival stage image">
+                <img src="samee pictures/stage1.JPG" alt="Samee on festival stage" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Festival stage</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="live" data-caption="Live crowd stage image">
+                <img src="samee pictures/stage3.JPG" alt="Samee on stage with crowd" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>Stage with crowd</p>
+            </article>
+            <article class="instrument-card gallery-item" data-category="signature" data-caption="Signature Pink Panther guitar portrait">
+                <img src="samee pictures/with pink panther.jpg" alt="Samee with his Pink Panther guitar" loading="lazy" style="width:100%; height:auto; border-radius:12px; object-fit:cover; cursor:pointer;">
+                <p>With Pink Panther</p>
             </article>
         </div>
 
         <div class="load-more-wrap">
-            <button id="loadMoreBtn" class="load-more-btn" type="button" aria-label="Load more photos">Show more photos</button>
+            <button id="loadMoreBtn" class="load-more-btn" type="button" aria-label="Load more photos">Explore more photos</button>
         </div>
 
         <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
@@ -1130,38 +1776,48 @@
         </div>
     </section>
 
-    <section id="videos">
-        <h2>📼 Featured Live Performances & Media</h2>
-        <p style="color:#b3c4dc;">The most important live broadcasts and studio session videos in one curated collection.</p>
+    <section id="videos" class="py-16" style="background-image: linear-gradient(135deg, rgba(10,15,35,0.92), rgba(20,25,55,0.88)), url('samee pictures/coke-studio-official-photo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
+        <div class="container mx-auto px-4" style="position: relative; z-index: 1;">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">📼 Featured Live Performances & Media</h2>
+                <p class="text-gray-200 max-w-2xl mx-auto">The most important live broadcasts and studio session videos in one curated collection.</p>
+            </div>
 
-        <h3>Notable Performances & Media</h3>
+            <h3 class="text-xl font-semibold text-white mb-8 text-center">Notable Performances & Media</h3>
         <div class="video-grid">
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/UghMf59vDJM/hqdefault.jpg" alt="Coke Studio Bangla (Season 3) — Moha Jadu thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Coke Studio Bangla (Season 3) — Moha Jadu</h4>
                 <p>Featured Afghan Rubab instrumentalist in international fusion act with Habib Wahid.</p>
                 <a href="https://youtu.be/UghMf59vDJM" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/WhXsfZpHsWE/hqdefault.jpg" alt="Habib Wahid — Beni Khuley thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Habib Wahid — Beni Khuley</h4>
                 <p>Lead guitarist in official music video (50M+ views commercial hit).</p>
                 <a href="https://youtu.be/WhXsfZpHsWE" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/0DD2IvksQJk/hqdefault.jpg" alt="IPDC Amader Gaan — Shua Urilo Urilo thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>IPDC Amader Gaan — Shua Urilo Urilo</h4>
                 <p>Instrumental contribution with Joler Gaan in a flagship folk preservation series.</p>
                 <a href="https://youtu.be/0DD2IvksQJk" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/sDs_o5Oer_0/hqdefault.jpg" alt="BTV Eid Special — Hawai Midhai thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>BTV Eid Special — Hawai Midhai</h4>
                 <p>Core Joler Gaan performer on national television holiday broadcast.</p>
                 <a href="https://youtu.be/sDs_o5Oer_0" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/7Bh9lebfduE/hqdefault.jpg" alt="Bangladesh Television — Jibon Boro Odbhut thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Bangladesh Television — Jibon Boro Odbhut</h4>
                 <p>Featured guitarist in a televised duet with Pinto Ghosh.</p>
                 <a href="https://youtu.be/7Bh9lebfduE" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/LboeLzmVeBA/hqdefault.jpg" alt="NewsBangla24 — School Kholar Gaan thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>NewsBangla24 — School Kholar Gaan</h4>
                 <p>Social awareness performance with Joler Gaan in post-pandemic education campaign.</p>
                 <a href="https://youtu.be/LboeLzmVeBA" target="_blank" rel="noopener">Watch on YouTube</a>
@@ -1171,186 +1827,154 @@
         <h3>Live Tour & Acoustic Sessions</h3>
         <div class="video-grid">
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/QGgOmUi8OLc/hqdefault.jpg" alt="Habib Wahid USA Tour (2023) thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Habib Wahid USA Tour (2023)</h4>
                 <p>Tour highlight compilation with diverse arrangements and live stage energy.</p>
                 <a href="https://www.youtube.com/watch?v=QGgOmUi8OLc&amp;list=PLWNSI0Y548nW_yoIMo1G_Z9dIOIwTpsn7" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/cyo2p-ebuU8/hqdefault.jpg" alt="Zhir Zhir (Acoustic Performance) thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Zhir Zhir (Acoustic Performance)</h4>
                 <p>Intimate firelight acoustic session with raw organic guitar style.</p>
                 <a href="https://youtu.be/cyo2p-ebuU8?si=fo3HfiK5RhBLC-pw" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/T40w9hJADos/hqdefault.jpg" alt="Live at Bangladesh Shilpakala Academy thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Live at Bangladesh Shilpakala Academy</h4>
                 <p>Full-length academy performance that captures broad musical repertoire.</p>
                 <a href="https://youtu.be/T40w9hJADos?list=PLWNSI0Y548nUIil-LepLcMfw49RnpbOK6&t=13923" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/UcHs1sQmF3I/hqdefault.jpg" alt="GP Unplugged Session thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>GP Unplugged Session</h4>
                 <p>High-quality studio-live unplugged session with nuanced acoustic textures.</p>
                 <a href="https://youtu.be/UcHs1sQmF3I?si=F0Gzt824q_HbEpcW" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/axW_Xe0A8go/hqdefault.jpg" alt="Din Gelo (Live Performance) thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Din Gelo (Live Performance)</h4>
                 <p>Elegant live rendition, polished visuals and melodic precision.</p>
                 <a href="https://youtu.be/axW_Xe0A8go?si=vy0KRQFkgGIy9nkK" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
             <article class="video-card">
+                <img src="https://img.youtube.com/vi/DnqM7NMFpFw/hqdefault.jpg" alt="Melbourne Tour — Guitar Cam thumbnail" style="width:100%; height:auto; border-radius:8px; margin-bottom:10px;">
                 <h4>Melbourne Tour — Guitar Cam</h4>
                 <p>Close-up technical live view of the guitar performance on stage.</p>
                 <a href="https://youtu.be/DnqM7NMFpFw?si=x5v7xn_hHjLtBPrh" target="_blank" rel="noopener">Watch on YouTube</a>
             </article>
         </div>
-    </section>
-
-    <section id="career-timeline">
-        <h2>🕒 Career & Performance Timeline</h2>
-        <p style="color:#b3c4dc;">Chronological journey from early bands to international stardom.</p>
-
-        <div class="timeline">
-            <article class="timeline-item">
-                <span class="timeline-date">2025-09</span>
-                <div class="timeline-content">
-                    <h3>Coke Studio Bangla Season 3</h3>
-                    <p>Featured Rubab artist on "Moha Jadu" with Habib Wahid. National broadcast and multi-platform reach.</p>
-                    <a href="https://www.cokestudiobangla.com" target="_blank" rel="noopener">Official profile</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2024-12-28</span>
-                <div class="timeline-content">
-                    <h3>BPL Music Fest 2025 Opening</h3>
-                    <p>Headliner guitarist for Habib Wahid at MA Aziz Stadium, Chittagong.</p>
-                    <a href="https://example.com/bpl-2025" target="_blank" rel="noopener">Media coverage</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2024-11-21</span>
-                <div class="timeline-content">
-                    <h3>Riyadh Season 2024 (Saudi Arabia)</h3>
-                    <p>Government-invited cultural showcase at Suwaidi Park with Habib Wahid. Exclusive high-profile international program.</p>
-                    <a href="https://example.com/riyadh-2024" target="_blank" rel="noopener">Event recap</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2024-10-26</span>
-                <div class="timeline-content">
-                    <h3>Australia Tour – Sydney</h3>
-                    <p>Habib Wahid tour kickoff at Whitlam Leisure Centre.</p>
-                    <a href="https://example.com/gamma-college-2024" target="_blank" rel="noopener">Tour details</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2024-11-02</span>
-                <div class="timeline-content">
-                    <h3>Australia Tour – Melbourne</h3>
-                    <p>Sold-out Williamstown Town Hall performance in collaboration with Habib Wahid.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2023-07-09</span>
-                <div class="timeline-content">
-                    <h3>USA Tour – San Jose, CA</h3>
-                    <p>Sequoia High School concert as part of the four-state tour with Habib Wahid.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2023-07-10</span>
-                <div class="timeline-content">
-                    <h3>USA Tour – Los Angeles, CA</h3>
-                    <p>The Ebell of Los Angeles featured ensemble set with Habib Wahid.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2023-07-22</span>
-                <div class="timeline-content">
-                    <h3>USA Tour – Plano, TX</h3>
-                    <p>Live performance in Dallas area as part of the same U.S. tour.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2023-07-23</span>
-                <div class="timeline-content">
-                    <h3>USA Tour – New York, NY</h3>
-                    <p>Queens Theatre headline with Habib Wahid.</p>
-                    <a href="https://example.com/nyc-2023" target="_blank" rel="noopener">Coverage link</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2022-06-29</span>
-                <div class="timeline-content">
-                    <h3>National Instrumental Music Festival</h3>
-                    <p>Solo mandolin featured at Bangladesh Shilpakala Academy.</p>
-                    <a href="https://example.com/national-music-festival" target="_blank" rel="noopener">Festival details</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2021-12-12</span>
-                <div class="timeline-content">
-                    <h3>Digital Bangladesh Concert</h3>
-                    <p>Landmark national broadcast with Imran Mahmudul.</p>
-                    <a href="https://example.com/digital-bd-2021" target="_blank" rel="noopener">Event coverage</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2021-03</span>
-                <div class="timeline-content">
-                    <h3>Mujib Shotobarsho at National Parade Ground</h3>
-                    <p>Mandolin feature with Joler Gaan in national celebration.</p>
-                    <a href="https://example.com/mujib-shotobarsho" target="_blank" rel="noopener">News link</a>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2020</span>
-                <div class="timeline-content">
-                    <h3>National Cultural Classical Carnival</h3>
-                    <p>Champion & Judges' Choice Award (Instrumental category).</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2019</span>
-                <div class="timeline-content">
-                    <h3>India Tours with Kureghor</h3>
-                    <p>Agartala and Sonamura performances, cross-border cultural exchange.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2018-2021</span>
-                <div class="timeline-content">
-                    <h3>Professional Studio Era</h3>
-                    <p>Assistant Producer at Music Factory and M Records on TV and film projects.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-date">2013-2015</span>
-                <div class="timeline-content">
-                    <h3>The Band Era (Chatok & Doorgo)</h3>
-                    <p>Founded Doorgo and founding guitarist for Chatok; key early career motion.</p>
-                </div>
-            </article>
-                </div>
-            </article>
         </div>
     </section>
 
+    <section id="career-timeline" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold">🕒 Career & Performance Timeline</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl">Compact career milestones designed for a clean website experience. Click to expand the full details.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="samee pictures/coke-studio-official-photo.jpg" alt="Saleh Samee profile photo" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-xl">
+                    <div>
+                        <div class="text-sm uppercase tracking-[0.18em] text-slate-500">Profile</div>
+                        <div class="text-lg font-semibold">Saleh Samee</div>
+                    </div>
+                </div>
+            </div>
 
+            <details class="timeline-card bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden">
+                <summary>
+                    <div>
+                        <div class="timeline-summary-title">Timeline overview</div>
+                        <div class="timeline-summary-copy">2025 breakthrough, international tours, USA run, national recognition, studio era, and early foundations.</div>
+                    </div>
+                    <span class="timeline-toggle">▼</span>
+                </summary>
+                <div class="timeline-body">
+                    <div class="timeline-grid">
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2025 — Breakthrough & Global Visibility</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Featured Rubab artist on Coke Studio Bangla Season 3 (“Moha Jadu”)</li>
+                                <li>Opened BPL Music Fest — MA Aziz Stadium, Chittagong</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2024 — International Touring Era</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Riyadh Season — Suwaidi Park (with Habib Wahid)</li>
+                                <li>Australia Tour — Sydney & Melbourne (with Habib Wahid)</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2023 — USA Tour</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Queens Theatre, New York</li>
+                                <li>The Ebell, Los Angeles</li>
+                                <li>Dallas & Redwood City shows (with Habib Wahid)</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2022 — National Recognition</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Solo Mandolin at National Instrumental Music Festival</li>
+                                <li>Bangladesh Shilpakala Academy</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2021 — National Stage & Television</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Mujib Shotobarsho — National Parade Ground (with Joler Gaan)</li>
+                                <li>Digital Bangladesh Concert — UIU</li>
+                                <li>Regular features on BTV, RTV, NTV, Channel i</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2018–2021 — Session & Studio Era</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Assistant Producer — Music Factory & M Records</li>
+                                <li>Session work with top artists</li>
+                                <li>Composed “Keu Nei” (1.3M+ views)</li>
+                                <li class="text-gray-500">Champion — National Cultural Classical Carnival (2020)</li>
+                            </ul>
+                        </article>
+                        <article class="p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <h3 class="font-semibold text-gray-900 mb-2">2013–2017 — Foundations</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>Founder & Lead Guitarist — Chatok</li>
+                                <li>Co-founder — Doorgo</li>
+                                <li>Album: Sohoj Manush (2015)</li>
+                            </ul>
+                        </article>
+                    </div>
 
-
+                    <div class="mt-8 p-5 rounded-3xl bg-slate-950 text-white border border-white border-opacity-10">
+                        <h3 class="text-xl font-semibold mb-4">🌍 Selected Performances</h3>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <div>
+                                <h4 class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">International</h4>
+                                <ul class="space-y-2 text-sm text-slate-200">
+                                    <li>Riyadh Season, Saudi Arabia (2024)</li>
+                                    <li>Australia Tour — Sydney & Melbourne (2024)</li>
+                                    <li>USA Tour — New York, Los Angeles, Dallas (2023)</li>
+                                    <li>Agartala, India — Rabindra Bhavan & Nazrul Kalakshetra</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Bangladesh Highlights</h4>
+                                <ul class="space-y-2 text-sm text-slate-200">
+                                    <li>BPL Music Fest Opening (2024)</li>
+                                    <li>Cholo Bangladesh — Army Stadium (2023)</li>
+                                    <li>National Instrumental Music Festival (2022)</li>
+                                    <li>Mujib Shotobarsho National Event (2021)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
 
     <section id="awards">
         <h2>🏆 Awards and Recognition</h2>
@@ -1361,13 +1985,62 @@
     </section>
     </main>
 
-    <section id="contact" class="links">
-        <a href="https://youtube.com/@samee.creates" target="_blank" rel="me noopener noreferrer">YouTube</a>
-        <a href="https://instagram.com/samee.creates" target="_blank" rel="me noopener noreferrer">Instagram</a>
-        <a href="https://facebook.com/samee.creates" target="_blank" rel="me noopener noreferrer">Facebook</a>
-        <a href="https://www.wikidata.org/wiki/Q138642133" target="_blank" rel="me noopener noreferrer">Wikidata</a>
-        <a href="https://soundbetter.com/profiles/690854-saleh-samee" target="_blank" rel="me noopener noreferrer">SoundBetter</a>
-        <a href="mailto:samee2040@gmail.com" rel="me">Email Contact</a>
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ready to collaborate? Let's create something amazing together. Reach out for bookings, productions, or just to say hello.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <p><strong>Email:</strong> <a href="mailto:samee2040@gmail.com" class="text-blue-600 hover:underline">samee2040@gmail.com</a></p>
+                        <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+                        <p><strong>Available for:</strong> Live performances, studio sessions, productions</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mt-8 mb-4">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@samee.creates" target="_blank" rel="noopener" class="text-red-600 hover:text-red-800 text-2xl">📺</a>
+                        <a href="https://instagram.com/samee.creates" target="_blank" rel="noopener" class="text-pink-600 hover:text-pink-800 text-2xl">📷</a>
+                        <a href="https://facebook.com/samee.creates" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800 text-2xl">📘</a>
+                        <a href="https://soundbetter.com/profiles/690854-saleh-samee" target="_blank" rel="noopener" class="text-green-600 hover:text-green-800 text-2xl">🎵</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <form action="https://formspree.io/f/xpznwqgk" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-12 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-6">Get notified about new releases, live performances, and exclusive content.</p>
+            <form action="https://formspree.io/f/xpznwqgk" method="POST" class="max-w-md mx-auto">
+                <input type="hidden" name="_subject" value="Newsletter Signup" />
+                <div class="flex">
+                    <input type="email" name="email" placeholder="Your email address" required class="flex-1 px-4 py-2 rounded-l-lg text-gray-900">
+                    <button type="submit" class="bg-white text-purple-600 px-6 py-2 rounded-r-lg font-semibold hover:bg-gray-100">Subscribe</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer>
@@ -1480,7 +2153,39 @@
             }
         });
 
-        renderGallery();
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.add('dark');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+        
+        // Scroll animations
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
